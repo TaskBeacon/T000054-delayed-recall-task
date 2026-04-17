@@ -1,0 +1,83 @@
+task_id: T000054
+generated_at: '2026-04-17T01:13:37Z'
+selection_policy: tiered_mix_high_impact_plus_high_citation_open_access
+citation_threshold: 100
+papers:
+- id: W3048545550
+  title: Pupil-linked arousal signals track the temporal organization of events in
+    memory
+  authors:
+  - David Clewett
+  - Camille Gasser
+  - Lila Davachi
+  year: 2020
+  journal: Nature Communications
+  doi_or_url: https://doi.org/10.1038/s41467-020-17851-9
+  citation_count: 167
+  is_high_impact: false
+  open_access: true
+  used_for:
+  - task_workflow
+  - timing_parameters
+  parameter_bindings: {}
+  notes: Primary timing and event-boundary source for the delayed-recall sequence
+    flow.
+- id: W2171345731
+  title: Human hippocampus represents space and time during retrieval of real-world
+    memories
+  authors:
+  - Dylan M. Nielson
+  - Troy A. Smith
+  - Vishnu Sreekumar
+  - Simon Dennis
+  - Per B. Sederberg
+  year: 2015
+  journal: Proceedings of the National Academy of Sciences
+  doi_or_url: https://doi.org/10.1073/pnas.1507104112
+  citation_count: 252
+  is_high_impact: true
+  open_access: true
+  used_for:
+  - task_workflow
+  - timing_parameters
+  parameter_bindings: {}
+  notes: High-impact support for temporal and spatial memory retrieval framing.
+- id: W2088167889
+  title: Prefrontal and Medial Temporal Lobe Activity at Encoding Predicts Temporal
+    Context Memory
+  authors:
+  - Lucas J. Jenkins
+  - Charan Ranganath
+  year: 2010
+  journal: Journal of Neuroscience
+  doi_or_url: https://doi.org/10.1523/jneurosci.1337-10.2010
+  citation_count: 225
+  is_high_impact: false
+  open_access: true
+  used_for:
+  - task_workflow
+  - timing_parameters
+  parameter_bindings: {}
+  notes: Encoding-to-temporal-context memory support.
+- id: W2238578392
+  title: 'Recovering and preventing loss of detailed memory: differential rates of
+    forgetting for detail types in episodic memory'
+  authors:
+  - Melanie J. Sekeres
+  - Kyra Bonasia
+  - Marie St-Laurent
+  - Sara Pishdadian
+  - Gordon Winocur
+  - Cheryl L. Grady
+  - Morris Moscovitch
+  year: 2016
+  journal: Learning & Memory
+  doi_or_url: https://doi.org/10.1101/lm.039057.115
+  citation_count: 181
+  is_high_impact: false
+  open_access: true
+  used_for:
+  - task_workflow
+  - timing_parameters
+  parameter_bindings: {}
+  notes: Support for delayed-memory decay and detail retention framing.

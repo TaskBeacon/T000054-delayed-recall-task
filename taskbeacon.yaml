@@ -1,0 +1,22 @@
+id: T000054
+slug: delayed-recall-task
+title: Delayed Recall Task
+acquisition: behavior
+variant: baseline
+cognitive_domain:
+  - memory
+  - episodic_memory
+  - attention
+maturity: draft
+version:
+  release_tag: v0.1.0-dev
+contracts:
+  psyflow_taps: v0.1.0
+evidence:
+  - references/references.yaml
+  - references/references.md
+  - references/parameter_mapping.md
+  - references/stimulus_mapping.md
+  - references/task_logic_audit.md
+maintainer: []
+

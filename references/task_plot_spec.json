@@ -1,0 +1,321 @@
+{
+  "task_plot_spec": {
+    "spec_version": "0.2",
+    "meta": {
+      "task_name": "Delayed Recall Task",
+      "mode": "existing",
+      "task_id": ""
+    },
+    "figure": {
+      "output": {
+        "filename": "task_flow.png",
+        "dpi": 300,
+        "width_in": 16.0,
+        "background": "white"
+      },
+      "layout": {
+        "max_conditions": 4,
+        "screens_per_timeline": 11,
+        "screen_overlap_ratio": 0.1,
+        "screen_slope": 0.08,
+        "screen_slope_deg": 25.0,
+        "timeline_gap": 0.18,
+        "screen_aspect_ratio": 1.4545454545454546,
+        "left_margin": 0.2,
+        "right_margin": 0.08,
+        "top_margin": 0.03,
+        "bottom_margin": 0.05,
+        "condition_label_gap": 0.014,
+        "phase_label_pad": 0.01,
+        "duration_label_gap": 0.006,
+        "timeline_arrow_gap": 0.01,
+        "timeline_arrow_screen_clearance": 0.007,
+        "timeline_arrow_text_clearance": 0.01,
+        "timeline_arrow_extra_per_screen": 0.015,
+        "timeline_arrow_min_y": 0.02,
+        "timeline_arrow_max_y": 0.96
+      }
+    },
+    "timelines": [
+      {
+        "condition": "practice_sequence",
+        "display_condition_label": "Practice Sequence",
+        "phases": [
+          {
+            "phase_name": "sequence fixation",
+            "display_phase_label": "Fixation",
+            "duration_ms": {
+              "fixed": 500
+            },
+            "response_window_ms": null,
+            "display_timing_label": "500 ms",
+            "stim_ids": [
+              "fixation"
+            ],
+            "stimulus_example": {
+              "summary": "+",
+              "modality": "visual",
+              "draw_hint": "text",
+              "render_items": [
+                {
+                  "kind": "text",
+                  "text": "+",
+                  "color": "black",
+                  "pos": [
+                    0.0,
+                    0.0
+                  ],
+                  "height": 48.0
+                }
+              ]
+            },
+            "notes": ""
+          },
+          {
+            "phase_name": "encoding item",
+            "display_phase_label": "Memory Set",
+            "duration_ms": {
+              "fixed": 2500
+            },
+            "response_window_ms": null,
+            "display_timing_label": "2500 ms",
+            "stim_ids": [
+              "object_card"
+            ],
+            "stimulus_example": {
+              "summary": "[dynamic:object_card]",
+              "modality": "other",
+              "draw_hint": "annotation",
+              "render_items": [
+                {
+                  "kind": "annotation",
+                  "text": "Dynamic: object_card"
+                }
+              ]
+            },
+            "notes": ""
+          },
+          {
+            "phase_name": "encoding isi pre tone",
+            "display_phase_label": "Memory Set",
+            "duration_ms": {
+              "fixed": 1500
+            },
+            "response_window_ms": null,
+            "display_timing_label": "1500 ms",
+            "stim_ids": [
+              "blank_screen"
+            ],
+            "stimulus_example": {
+              "summary": "Rectangle Rectangle",
+              "modality": "visual",
+              "draw_hint": "shape",
+              "render_items": [
+                {
+                  "kind": "shape",
+                  "shape": "rect",
+                  "label": "Rectangle Rectangle",
+                  "color": "white",
+                  "line_color": "white",
+                  "line_width": 1.0,
+                  "pos": [
+                    0.0,
+                    0.0
+                  ],
+                  "size": null
+                }
+              ]
+            },
+            "notes": ""
+          },
+          {
+            "phase_name": "context tone",
+            "display_phase_label": "Context Tone",
+            "duration_ms": {
+              "fixed": 1000
+            },
+            "response_window_ms": null,
+            "display_timing_label": "1000 ms",
+            "stim_ids": [],
+            "stimulus_example": {
+              "summary": "[annotation] context tone",
+              "modality": "other",
+              "draw_hint": "annotation",
+              "render_items": [
+                {
+                  "kind": "annotation",
+                  "text": "context tone"
+                }
+              ]
+            },
+            "notes": ""
+          },
+          {
+            "phase_name": "encoding isi post tone",
+            "display_phase_label": "Memory Set",
+            "duration_ms": {
+              "fixed": 500
+            },
+            "response_window_ms": null,
+            "display_timing_label": "500 ms",
+            "stim_ids": [
+              "blank_screen"
+            ],
+            "stimulus_example": {
+              "summary": "Rectangle Rectangle",
+              "modality": "visual",
+              "draw_hint": "shape",
+              "render_items": [
+                {
+                  "kind": "shape",
+                  "shape": "rect",
+                  "label": "Rectangle Rectangle",
+                  "color": "white",
+                  "line_color": "white",
+                  "line_width": 1.0,
+                  "pos": [
+                    0.0,
+                    0.0
+                  ],
+                  "size": null
+                }
+              ]
+            },
+            "notes": ""
+          },
+          {
+            "phase_name": "distractor task",
+            "display_phase_label": "Distractor Task",
+            "duration_ms": {
+              "fixed": 1500
+            },
+            "response_window_ms": null,
+            "display_timing_label": "1500 ms",
+            "stim_ids": [
+              "distractor_arrow"
+            ],
+            "stimulus_example": {
+              "summary": "[dynamic:distractor_arrow]",
+              "modality": "other",
+              "draw_hint": "annotation",
+              "render_items": [
+                {
+                  "kind": "annotation",
+                  "text": "Dynamic: distractor_arrow"
+                }
+              ]
+            },
+            "notes": ""
+          },
+          {
+            "phase_name": "temporal order probe",
+            "display_phase_label": "Probe",
+            "duration_ms": {
+              "fixed": 3500
+            },
+            "response_window_ms": null,
+            "display_timing_label": "3500 ms",
+            "stim_ids": [
+              "pair_cards"
+            ],
+            "stimulus_example": {
+              "summary": "[dynamic:pair_cards]",
+              "modality": "other",
+              "draw_hint": "annotation",
+              "render_items": [
+                {
+                  "kind": "annotation",
+                  "text": "Dynamic: pair_cards"
+                }
+              ]
+            },
+            "notes": ""
+          },
+          {
+            "phase_name": "temporal distance probe",
+            "display_phase_label": "Probe",
+            "duration_ms": {
+              "fixed": 3500
+            },
+            "response_window_ms": null,
+            "display_timing_label": "3500 ms",
+            "stim_ids": [
+              "distance_scale"
+            ],
+            "stimulus_example": {
+              "summary": "[dynamic:distance_scale]",
+              "modality": "other",
+              "draw_hint": "annotation",
+              "render_items": [
+                {
+                  "kind": "annotation",
+                  "text": "Dynamic: distance_scale"
+                }
+              ]
+            },
+            "notes": ""
+          },
+          {
+            "phase_name": "source memory probe",
+            "display_phase_label": "Probe",
+            "duration_ms": {
+              "fixed": 3500
+            },
+            "response_window_ms": null,
+            "display_timing_label": "3500 ms",
+            "stim_ids": [
+              "source_probe"
+            ],
+            "stimulus_example": {
+              "summary": "[dynamic:source_probe]",
+              "modality": "other",
+              "draw_hint": "annotation",
+              "render_items": [
+                {
+                  "kind": "annotation",
+                  "text": "Dynamic: source_probe"
+                }
+              ]
+            },
+            "notes": ""
+          },
+          {
+            "phase_name": "sequence summary",
+            "display_phase_label": "Sequence Summary",
+            "duration_ms": null,
+            "response_window_ms": null,
+            "display_timing_label": "",
+            "stim_ids": [
+              "sequence_summary_text"
+            ],
+            "stimulus_example": {
+              "summary": "… Encoding accuracy: … Temporal-order accurac…",
+              "modality": "visual",
+              "draw_hint": "text",
+              "render_items": [
+                {
+                  "kind": "text",
+                  "text": "…\n\nEncoding accuracy: …\nTemporal-order accuracy (same / boundary): … / …\nSource accuracy: …\nMean response time: …\n\n…",
+                  "color": "black",
+                  "pos": [
+                    0.0,
+                    0.0
+                  ],
+                  "height": 26.0
+                }
+              ]
+            },
+            "notes": ""
+          }
+        ],
+        "condition_variants": [
+          "test_sequence_01",
+          "test_sequence_02",
+          "test_sequence_03"
+        ],
+        "display_condition_note": "Also: Test Sequence 01, Test Sequence 02, Test Sequence 03"
+      }
+    ],
+    "legend": []
+  }
+}

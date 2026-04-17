@@ -1,0 +1,12 @@
+# Ignore generated outputs and Python caches
+/outputs/*
+!/outputs/.gitkeep
+__pycache__/
+*.pyc
+src/__pycache__/
+responders/__pycache__/
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+

@@ -1,0 +1,432 @@
+subinfo_fields:
+  - name: subject_id
+    type: int
+    constraints:
+      min: 101
+      max: 999
+      digits: 3
+
+subinfo_mapping:
+  subject_id: Subject ID (3 digits)
+  Participant Information: Participant Information
+  registration_failed: Registration failed
+  registration_successful: Registration successful
+  invalid_input: '{field} is invalid'
+
+window:
+  size: [1280, 720]
+  units: pix
+  screen: 0
+  bg_color: white
+  fullscreen: false
+  monitor_width_cm: 35.5
+  monitor_distance_cm: 60
+
+task:
+  task_name: delayed_recall_task
+  save_path: ./outputs/qa
+  language: English
+  voice_name: en-US-AriaNeural
+  voice_enabled: false
+  seed_mode: same_across_sub
+  overall_seed: 54054
+  block_seed:
+    - 54054
+    - 54055
+  total_blocks: 2
+  total_trials: 2
+  trials_per_block: 1
+  conditions:
+    - practice_sequence
+    - test_sequence_01
+  continue_key: space
+  encoding_keys:
+    - f
+    - j
+  distractor_keys:
+    - left
+    - right
+  distance_keys:
+    - "1"
+    - "2"
+    - "3"
+    - "4"
+  source_keys:
+    - f
+    - j
+  sequence_trial_count: 16
+  event_length_items: 8
+  same_context_probe_count: 2
+  boundary_probe_count: 2
+  source_probe_count: 4
+  cognitive_domain:
+    - memory
+    - episodic_memory
+    - attention
+  variant: baseline
+
+timing:
+  fixation_duration_s: 0.4
+  item_duration_s: 1.25
+  inter_item_interval_s: 1.5
+  context_tone_offset_s: 0.75
+  context_tone_duration_s: 0.5
+  post_tone_duration_s: 0.25
+  distractor_duration_s: 12.0
+  distractor_trial_duration_s: 1.0
+  order_response_window_s: 2.0
+  distance_response_window_s: 2.0
+  source_response_window_s: 2.0
+  summary_hold_s: 0.25
+
+stimuli:
+  instruction_text:
+    type: text
+    font: Arial
+    text: |-
+      In this task you will study sequences of everyday objects.
+
+      For each object, judge whether it is usually found indoors or outdoors.
+      After the sequence, you will complete a short distraction task and then answer memory questions.
+
+      For the object, order, and source questions, use the key shown in the task instructions:
+      F for the left option and J for the right option.
+      For the distance ratings, use 1, 2, 3, or 4 as labeled.
+      For the arrow task, use the left and right arrow keys.
+
+      The first sequence is practice.
+      Press Space to begin.
+    color: black
+    height: 28
+    wrapWidth: 1040
+    pos: [0, 0]
+  fixation:
+    type: text
+    font: Arial
+    text: "+"
+    color: black
+    height: 48
+    pos: [0, 0]
+  blank_screen:
+    type: rect
+    width: 2000
+    height: 2000
+    pos: [0, 0]
+    fillColor: white
+    lineColor: white
+    lineWidth: 0
+  object_card_frame:
+    type: rect
+    width: 420
+    height: 240
+    lineColor: "#444444"
+    fillColor: "#f7f7f7"
+    lineWidth: 3
+    pos: [0, 40]
+  object_card_text:
+    type: text
+    font: Arial
+    text: "{object_label}"
+    color: black
+    height: 36
+    wrapWidth: 360
+    pos: [0, 40]
+  encoding_prompt_text:
+    type: text
+    font: Arial
+    text: Is this object usually found indoors or outdoors?
+    color: black
+    height: 24
+    wrapWidth: 900
+    pos: [0, -165]
+  pair_card_frame_left:
+    type: rect
+    width: 360
+    height: 220
+    lineColor: "#444444"
+    fillColor: "#f7f7f7"
+    lineWidth: 3
+    pos: [-260, 40]
+  pair_card_text_left:
+    type: text
+    font: Arial
+    text: "{object_label}"
+    color: black
+    height: 34
+    wrapWidth: 300
+    pos: [-260, 40]
+  pair_card_frame_right:
+    type: rect
+    width: 360
+    height: 220
+    lineColor: "#444444"
+    fillColor: "#f7f7f7"
+    lineWidth: 3
+    pos: [260, 40]
+  pair_card_text_right:
+    type: text
+    font: Arial
+    text: "{object_label}"
+    color: black
+    height: 34
+    wrapWidth: 300
+    pos: [260, 40]
+  order_prompt_text:
+    type: text
+    font: Arial
+    text: Which object appeared earlier in the sequence?
+    color: black
+    height: 24
+    wrapWidth: 900
+    pos: [0, -170]
+  distance_prompt_text:
+    type: text
+    font: Arial
+    text: How far apart were these objects in the sequence?
+    color: black
+    height: 24
+    wrapWidth: 900
+    pos: [0, -170]
+  distance_option_1:
+    type: text
+    font: Arial
+    text: "1  Very close"
+    color: black
+    height: 22
+    wrapWidth: 160
+    pos: [-270, -210]
+  distance_option_2:
+    type: text
+    font: Arial
+    text: "2  Close"
+    color: black
+    height: 22
+    wrapWidth: 120
+    pos: [-90, -210]
+  distance_option_3:
+    type: text
+    font: Arial
+    text: "3  Far"
+    color: black
+    height: 22
+    wrapWidth: 120
+    pos: [90, -210]
+  distance_option_4:
+    type: text
+    font: Arial
+    text: "4  Very far"
+    color: black
+    height: 22
+    wrapWidth: 160
+    pos: [270, -210]
+  source_card_frame:
+    type: rect
+    width: 420
+    height: 240
+    lineColor: "#444444"
+    fillColor: "#f7f7f7"
+    lineWidth: 3
+    pos: [0, 40]
+  source_card_text:
+    type: text
+    font: Arial
+    text: "{object_label}"
+    color: black
+    height: 36
+    wrapWidth: 360
+    pos: [0, 40]
+  source_prompt_text:
+    type: text
+    font: Arial
+    text: Which ear played the tone after this object?
+    color: black
+    height: 24
+    wrapWidth: 900
+    pos: [0, -165]
+  source_left_label:
+    type: text
+    font: Arial
+    text: F  Left ear
+    color: black
+    height: 22
+    wrapWidth: 180
+    pos: [-150, -220]
+  source_right_label:
+    type: text
+    font: Arial
+    text: J  Right ear
+    color: black
+    height: 22
+    wrapWidth: 180
+    pos: [150, -220]
+  distractor_arrow_text:
+    type: text
+    font: Arial
+    text: "{arrow_symbol}"
+    color: black
+    height: 72
+    pos: [0, 35]
+  distractor_prompt_text:
+    type: text
+    font: Arial
+    text: Press the arrow key that matches the arrow direction.
+    color: black
+    height: 22
+    wrapWidth: 900
+    pos: [0, -165]
+  sequence_summary_text:
+    type: text
+    font: Arial
+    text: |-
+      {sequence_label}
+
+      Encoding accuracy: {encoding_accuracy}
+      Temporal-order accuracy (same / boundary): {same_order_accuracy} / {boundary_order_accuracy}
+      Source accuracy: {source_accuracy}
+      Mean response time: {mean_rt_ms}
+
+      {next_step_label}
+    color: black
+    height: 26
+    wrapWidth: 960
+    pos: [0, 0]
+  good_bye_text:
+    type: text
+    font: Arial
+    text: |-
+      Task complete
+
+      Total sequences: {total_sequences}
+      Encoding accuracy: {encoding_accuracy}
+      Temporal-order accuracy: {order_accuracy}
+      Source accuracy: {source_accuracy}
+      Total timeouts: {total_timeouts}
+      Total time: {total_elapsed_min}
+
+      Press Space to exit.
+    color: black
+    height: 26
+    wrapWidth: 960
+    pos: [0, 0]
+  tone_left_392:
+    type: sound
+    file: ./assets/tones/tone_left_392.wav
+  tone_left_440:
+    type: sound
+    file: ./assets/tones/tone_left_440.wav
+  tone_left_494:
+    type: sound
+    file: ./assets/tones/tone_left_494.wav
+  tone_left_523:
+    type: sound
+    file: ./assets/tones/tone_left_523.wav
+  tone_left_587:
+    type: sound
+    file: ./assets/tones/tone_left_587.wav
+  tone_left_659:
+    type: sound
+    file: ./assets/tones/tone_left_659.wav
+  tone_right_392:
+    type: sound
+    file: ./assets/tones/tone_right_392.wav
+  tone_right_440:
+    type: sound
+    file: ./assets/tones/tone_right_440.wav
+  tone_right_494:
+    type: sound
+    file: ./assets/tones/tone_right_494.wav
+  tone_right_523:
+    type: sound
+    file: ./assets/tones/tone_right_523.wav
+  tone_right_587:
+    type: sound
+    file: ./assets/tones/tone_right_587.wav
+  tone_right_659:
+    type: sound
+    file: ./assets/tones/tone_right_659.wav
+
+triggers:
+  map:
+    exp_onset: 1
+    exp_end: 2
+    block_onset: 10
+    block_end: 11
+    sequence_fixation_onset: 20
+    encoding_item_onset: 21
+    encoding_isi_pre_tone_onset: 22
+    context_tone_onset: 23
+    encoding_isi_post_tone_onset: 24
+    distractor_arrow_onset: 30
+    temporal_order_probe_onset: 40
+    temporal_distance_probe_onset: 50
+    source_memory_probe_onset: 60
+    sequence_summary_onset: 70
+    good_bye_onset: 80
+    response_f: 101
+    response_j: 102
+    response_left: 103
+    response_right: 104
+    response_1: 111
+    response_2: 112
+    response_3: 113
+    response_4: 114
+    response_space: 120
+    response_timeout: 199
+  driver:
+    type: serial_url
+    url: loop://
+    baudrate: 115200
+    timeout: 1
+    prefix: [1, 225, 1, 0]
+  policy:
+    strict: false
+  timing:
+    post_delay_s: 0.001
+
+qa:
+  output_dir: outputs/qa
+  enable_scaling: true
+  timing_scale: 0.25
+  min_frames: 1
+  strict: false
+  max_wait_s: 30.0
+  acceptance_criteria:
+    required_columns:
+      - trial_id
+      - block_id
+      - block_idx
+      - trial_index_in_block
+      - trial_phase
+      - trial_kind
+      - condition_id
+      - sequence_role
+      - sequence_index
+      - is_practice
+      - sequence_count
+      - event_count
+      - encoding_accuracy
+      - distractor_accuracy
+      - order_accuracy
+      - same_order_accuracy
+      - boundary_order_accuracy
+      - distance_bucket_match_rate
+      - source_accuracy
+      - mean_rt_s
+      - total_timeouts
+      - sequence_duration_s
+      - response_key
+      - response_rt
+      - response_correct
+      - timed_out
+    expected_trial_count: 2
+    allowed_keys:
+      - space
+      - f
+      - j
+      - left
+      - right
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+    triggers_required: true
