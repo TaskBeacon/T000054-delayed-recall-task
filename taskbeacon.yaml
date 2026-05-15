@@ -11,7 +11,7 @@ maturity: draft
 version:
   release_tag: v0.1.0-dev
 contracts:
-  psyflow_taps: v0.1.0
+  taps: v0.1.0
 evidence:
   - references/references.yaml
   - references/references.md
@@ -19,4 +19,3 @@ evidence:
   - references/stimulus_mapping.md
   - references/task_logic_audit.md
 maintainer: []
-
